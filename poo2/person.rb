@@ -17,8 +17,6 @@ class Person
 		@age += 1
 	end
 
-
-
 end
 
 p1 = Person.new("Ana", "Lopez", 31)
