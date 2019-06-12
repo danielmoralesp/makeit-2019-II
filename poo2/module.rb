@@ -42,10 +42,6 @@ end
 System::Currency::Dollar.new
 
 
-
-
-
-
 ## loguear usuarios
 class Account
 
