@@ -6,4 +6,8 @@ class WelcomeController < ApplicationController
   def mi_vista
   	
   end
+
+  def hello
+  	@name = params[:name]
+  end
 end
