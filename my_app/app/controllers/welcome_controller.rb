@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+	def index
   	@name = "mi nombre"
   end
 
@@ -9,5 +9,16 @@ class WelcomeController < ApplicationController
 
   def hello
   	@name = params[:name]
+  end
+
+  def about
+  end
+
+  def contact_us
+  	
+  end
+
+  def prices
+  	@price = params[:dollar]
   end
 end
