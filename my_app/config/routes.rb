@@ -2,9 +2,7 @@ Rails.application.routes.draw do
 
 	root 'welcome#index' # el root se declara una sola vez
 
-	get 'welcome/prices/:dollar', to: 'welcome#prices', as: 'welcome_prices'
-	
-  namespace :welcome do
+	namespace :welcome do
 	  # get 'index', to: 'welcome#index', as: 'mi_propia_ruta'
 	  get 'mi_vista'
 	  get 'about'
@@ -13,15 +11,24 @@ Rails.application.routes.draw do
 	  # get 'prices/:dollar', to: 'welcome#prices', as: 'welcome_prices'
   end
 
-  namespace :blogs do
-  	get 'index'
-	  get 'show'
-	  get 'new'
-	  get 'edit'
-  end
+	resources :welcome
+
+	# get 'welcome/mi_vista'
+	# get 'welcome/about'
+
+	# get 'welcome/prices/:dollar', to: 'welcome#prices', as: 'welcome_prices'
+	
   
 
-  get 'hello/:name', to: 'welcome#hello', as: 'name'
+ #  namespace :blogs do
+ #  	get 'index'
+	#   get 'show'
+	#   get 'new'
+	#   get 'edit'
+ #  end
+  
+
+ #  get 'hello/:name', to: 'welcome#hello', as: 'name'
 
   # get 'users/login'
   # get 'users/sign_up'
