@@ -64,6 +64,25 @@ if (conditional_name){
 }
 
 
+while condition
+	// code
+end
+
+var i = 0
+while(i < 100){
+	console.log("Hola Mundo #" + i)
+	i += 1
+}
+
+for(inicializador; condicion; incrementador){
+	// code
+}
+
+for(var i = 0; i < 100; i++){
+	console.log("Hola Mundo #" + i)
+}
+
+
 
 
 
