@@ -82,14 +82,59 @@ for(var i = 0; i < 100; i++){
 	console.log("Hola Mundo #" + i)
 }
 
+array = [1, "Pedro", true, false]
+
+var str = "Hola Mundo"
+console.log(str.length)
+
+var objetoVacio = {}
+
+var maria = {
+	"nombre": "Maria",
+	"apellido": "Perez"
+}
+
+function nombre_function(){
+
+}
+
+var Persona = function(name, last_name){
+	this.name = name
+	this.last_name = last_name
+}
+
+var p1 = new Persona("Maria", "Lopez")
+console.log(p1)
+console.log(p1.name)
+console.log(p1["name"])
+
+p1.edad = 20
+p1["edad"] = 24
 
 
+class Persona 
+	def initialize(name, last_name)
+		@name = name
+		@last_name = last_name
+	end
+end
+
+p1 = Persona.new("Maria", "Lopez")
+puts p1.name
 
 
+var obj = {
+	"name": "Maria",
+	"last name": "Lopez",
+	hello: function (){
+		return "Hola " + this.name
+	}
+}
+
+console.log(obj.hello())
 
 
-
-
+<element event="some Javascript" />
 
 
 

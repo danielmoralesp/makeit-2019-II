@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function preferedBrowser(){
+			prefer = document.forms[0].browsers.value
+			// Swal.fire({
+			//   title: prefer,
+			//   text: 'Es su navegador preferido',
+			//   type: 'warning',
+			//   confirmButtonText: 'Cool'
+			// })
+			Swal.fire({
+			  title: prefer,
+			  text: "Es su navegador preferido",
+			  type: 'warning',
+			  showCancelButton: true,
+			  confirmButtonColor: '#3085d6',
+			  cancelButtonColor: '#d33',
+			  confirmButtonText: 'Yes, delete it!'
+			}).then((result) => {
+			  if (result.value) {
+			    Swal.fire(
+			      'Deleted!',
+			      'Your file has been deleted.',
+			      'success'
+			    )
+			  }
+			})
+			// alert("Su navegador preferido es " + prefer)
+		}
+
+		function confimInput(){
+			fname = document.forms[0].fname.value
+			alert("Hola " + fname + " seras redireccionado a Google que lo sabe todo.")
+
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+</head>
+<body>
+
+	Elija cual buscador es su preferido:
+	<form onsubmit="confirmInput()" action= "https://www.google.com">
+		<select name="" id="browsers" onchange="preferedBrowser()">
+			<option value="Chrome">Chrome</option>
+			<option value="Explorer">Explorer</option>
+			<option value="Firefox">Firefox</option>
+		</select>
+		<input type="text" id="fname">
+		<input type="submit">
+	</form>
+	
+</body>
+</html>

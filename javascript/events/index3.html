@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function myFunction(){
+			var x = document.getElementById("fname")
+			x.value = x.value.toUpperCase()
+		}
+	</script>
+</head>
+<body>
+
+	Ingrese su nombre: 
+	<input type="text" id="fname" onchange="myFunction()">
+
+	<p>
+		Cuando se sale del campo input, el evento se dispara. 
+	</p>
+	
+</body>
+</html>

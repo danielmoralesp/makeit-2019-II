@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" onmousemove="coords(event)">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function myFunction(e){
+	    var keynum;
+
+	    if(window.event) { // IE                    
+	      keynum = e.keyCode;
+	    } else if(e.which){ // Netscape/Firefox/Opera                   
+	      keynum = e.which;
+	    }
+
+	    return alert(String.fromCharCode(keynum));
+	  }
+
+	  function myLoad(){
+	  	alert("La pagina se ha cargado correctamente.")
+	  }
+
+	  function coords(event){
+	  	document.getElementById("demo").innerHTML = "X= " + event.clientX + "<br> Y= " + event.clientY;
+	  }
+	</script>
+</head>
+<body onload="myLoad()">
+
+	<input type="text" onkeypress="myFunction(event)">
+	<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mover el mouse sobre este H1</h1>
+
+	<!-- <p onmousemove="coords(event)">
+		Click aqui para desplegar las coordenadas x y y con el apuntador del mouse
+	</p> -->
+
+	<p id="demo"></p>
+	
+</body>
+</html>
