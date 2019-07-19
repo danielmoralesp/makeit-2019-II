@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous">
+	</script>
+	<style>
+		div {
+			background-color: red;
+			height: 200px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<div id="seleccioneme">
+		<p></p>
+		<div>
+			<p></p>
+			<p class="insert">Texto del parrafo</p>
+			<p class="remove">Remove</p>
+		</div>
+		<div id="step1">Paso 1</div>
+		<div id="step2">Paso 2</div>
+
+		<p id="step1"></p>
+	</div>
+
+	<script>
+		// document.getElementById('id').innerHTML=xxx
+		jQuery('div').on('click', function(){
+			$(this).css('background', 'yellow')
+		});
+
+		$('.insert').replaceWith("<h1>Etiqueta desde jquery</h1>")
+		$('.remove').remove()
+
+		$('div#step1').show()
+		$('div#step2').hide()
+	</script>
+	
+</body>
+</html>
